@@ -175,6 +175,8 @@ fig = px.line(monthly_users_df,
               title="Monthly Count of Bikeshare Rides").update_layout(xaxis_title='', yaxis_title='Total Rides')
 
 st.plotly_chart(fig, use_container_width=True)
+with st.expander("Penjelasan grafik peminjaman sepeda") :
+    st.write('Data mengalami kenaikan di tahun 2012 hingga menyentuh ke angka tertinggi 218573 sepeda dan itu menunjukkan perubahan yang sangat signifikan berbanding dengan tahun 2011 yang hanya  143512 sepeda. Jumlah sewa sepeda pada hari kerja lebih banyak daripada ketika hari libur. Berdasarkan bulan jumlah sewa sepeda paling tinggi di bulan 6 - 9 di tahun 2012.') 
 
 fig1 = px.bar(seasonly_users_df,
               x='season',
@@ -198,6 +200,9 @@ fig2 = px.bar(weekday_users_df,
 left_column, right_column = st.columns(2)
 left_column.plotly_chart(fig1, use_container_width=True)
 right_column.plotly_chart(fig2, use_container_width=True)
+with st.expander("Penjelasan grafik permusim") :
+    st.write('Musim Terbanyak melakukan peminjaman sepeda terjadi pada musim semi. Permintaan peminjaman sepeda hampir sama pada saat cerah dan berkabut. Hari-hari hujan dan bersalju menunjukkan jumlah pinjam rata-rata yang jauh lebih rendah. Data menunjukkan bahwa pengguna mungkin lebih cenderung untuk mengurangi aktivitas peminjaman sepeda saat kondisi cuaca buruk, seperti hujan. Ini disebabkan oleh ketidaknyamanan fisik saat berkendara sepeda saat hujan, keamanan yang lebih rendah, atau preferensi pengguna yang berubah pada kondisi cuaca tertentu. Informasi ini memiliki keuntungan bisnis yang penting bagi penyedia layanan sepeda. Mengetahui bahwa peminjaman sepeda dapat dipengaruhi oleh kondisi cuaca memungkinkan penyedia untuk merencanakan penyesuaian harga berdasarkan prakiraan cuaca.') 
+
 
 fig = px.line(hourly_users_df,
               x='hr',
@@ -207,8 +212,10 @@ fig = px.line(hourly_users_df,
               title='Count of bikeshare rides by hour of day').update_layout(xaxis_title='', yaxis_title='Total Rides')
 
 st.plotly_chart(fig, use_container_width=True)
+with st.expander("Penjelasan grafik permusim") :
+    st.write('Puncak permintaan sewa sepeda terjadi sekitar pukul 16.00 hingga 17.00 sore. Tingkat sewa sepeda tertinggi dalam sehari berada pada pukul 17 sore dengan rata-rata jumlah sebanyak 461 permintaan sewa') 
 
-st.caption('Copyright (c)')
+st.caption('Copyright (c) uas pdsd if3turtle 2024')
 
 # ----- HIDE STREAMLIT STYLE -----
 hide_st_style = """
