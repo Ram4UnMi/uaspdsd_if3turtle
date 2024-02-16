@@ -212,7 +212,7 @@ fig = px.line(hourly_users_df,
               title='Count of bikeshare rides by hour of day').update_layout(xaxis_title='', yaxis_title='Total Rides')
 
 st.plotly_chart(fig, use_container_width=True)
-with st.expander("Penjelasan grafik permusim") :
+with st.expander("Penjelasan grafik perjam") :
     st.write('Puncak permintaan sewa sepeda terjadi sekitar pukul 16.00 hingga 17.00 sore. Tingkat sewa sepeda tertinggi dalam sehari berada pada pukul 17 sore dengan rata-rata jumlah sebanyak 461 permintaan sewa') 
 
 st.caption('Copyright (c) uas pdsd if3turtle 2024')
