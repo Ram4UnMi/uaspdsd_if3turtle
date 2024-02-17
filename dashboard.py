@@ -132,7 +132,6 @@ intro_text = """
 10122115 - Noval Kurnia Wicaksono
 """
 st.sidebar.markdown(intro_text, unsafe_allow_html=True)
-#st.sidebar.markdown("Alfikri Ramadhan")
 
 # hubungkan filter dengan main_df
 
